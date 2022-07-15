@@ -1,0 +1,95 @@
+                 July 15   July 15   July 15   July 15   July 15   July 15   July 15
+lost all July 1st work. redoing successful GANs,
+-remove weekends, normalize
+                 
+                 
+                 July 2   July 2  July 2   July 2  July 2   July 2  July 2   July 2
+                  
+testing with double the training data and twice the epochs for the discriminator in each evaluation as
+compared to the generator, results may still be noisy 
+next steps MUST include:
+- mechanism for storing loss functions
+- mechanism for storing models
+- somethign nice to show Professor El Gamal
+additionally, potential paths forward MAY include:
+- lowpass filter of noisy generated data
+- conv layers in gen and disc architectures
+- additional input to discrimantor with fourier transform of signal and/or 1st and 2nd differences
+- predicting multiple days
+- predicting from whole cluster OR multiple buildings
+- using true random data in latent space, rn we used normalized sequences of data, where we only produce one,
+  which means model might not be optimal
+
+
+
+
+                            July 1 July 1 July 1 July 1 July 1 July 1
+
+can't use regular latent space and feed random noise, must give it data and ask it to predict the day that 
+follows
+
+recall we have 2018 data and particularly june july august data, june 1st 2018 was a Friday, so we'll remove sat sun 
+for a weekday data set, btw, jan1 2018 was a monday
+
+will attempt to predict one day with three days
+
+THERE iS LEARNING 104AM July 2nd !!!!
+
+now to improve batch size
+
+nbatch = 512, 31s for 500 epochs
+nbatch = 256, 31s for 500 epochs
+nbatch = 256, 29s for 500 epochs
+nbatch = 64, 27s for 500 epochs
+
+^^NEEDS REVIEW^^
+
+SUCCESFUL learning on basic architecture, though at 20k epochs, results are noisy and discriminator
+accuracy is 64 and 86 for the real and fake data respectively
+
+now, disc training as much as generator, tomorrow, disc will train on twice the data and get two looks at it while generator does the standard batch
+
+
+
+                        June 15 June 15  June 15  June 15  June 15  June 15
+
+normalized kmeans for tscore tmax max
+as dbscan took an L and non normalized had sub10 clusters
+
+with  4 clusters
+0 has  96 elements
+1 has  119 elements
+2 has  38 elements
+3 has  15 elements
+
+
+same for tmax and max
+tons given the noisy label -1
+with  3 clusters
+0 has  22 elements
+1 has  202 elements
+2 has  44 elements
+
+https://machinelearningmastery.com/how-to-develop-a-generative-adversarial-network-for-a-1-dimensional-function-from-scratch-in-keras/
+is the GAN tutorial I first looked at
+
+                    
+                    
+                    Feb 28  Feb 28  Feb 28  Feb 28  Feb 28  Feb 28  Feb 28  Feb 28
+
+made method to reliably download, store and retrieve regions form the OEDI
+
+made method for creating a top month set of the data, 30 first days of month with top energy demand
+
+initiated DBSCAN clustering in tracy residential data
+
+made method for plotting in 3 dimensions, allowing visualization of generated clusters
+
+clustering in the (median, stdev,max) space has some success, likely separates out the noisy samples from the mainstream
+
+clustering from the raw data doesn't work yet even with eps = .005
+
+
+
+
+                        
