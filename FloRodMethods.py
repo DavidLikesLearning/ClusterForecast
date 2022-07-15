@@ -46,14 +46,30 @@ def splitSeqs(seq, n_steps_in, n_steps_out):
         i+=1
     return np.array(X), np.array(Y)
 
-def showRandRows(M,N,leg=False):
+def showRandRows(M,N=None,leg=False):
     '''
-    funnction to sample rows from a matrix M, returns the N rows chosen if 'leg' 
+    function to sample rows from a matrix M, returns the N rows chosen if 'leg' 
     it will add legend to the plot
-    '''s
-    randRows  =np.random.randint(0,M.shape[0],N)
+    '''
+    if N==None:
+        N = M.shape[0]
+    randRows  =np.random.choice(M.shape[0],size=N,replace=False)
     for i in randRows:
         plt.plot(M[i])
     if leg:
         pl.legend(randRows)
     return randRows
+
+def dispRandRows(M, N,figsize=(6,3)):
+    '''
+    plots N2 rows in an array N2/4 by 4 of individual plots, where N2 is the smallest multiple
+    of 4 equal to or greater than N.
+    plots contain random rows of matrix M
+    '''
+    N2 = (N//4+1)*4
+    randRows  =np.random.choice(M.shape[0],size=N2,replace=False)
+    plt.subplots(N2//4,4,figsize=figsize)
+    for i in range(N2):
+        plt.subplot(N2//4,4,i+1)
+        plt.plot(M[i])
+    plt.tight_layout()

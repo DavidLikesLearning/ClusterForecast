@@ -1,6 +1,52 @@
                  July 15   July 15   July 15   July 15   July 15   July 15   July 15
+                 
 lost all July 1st work. redoing successful GANs,
 -remove weekends, normalize
+alright, the sample GAN has been edited, now some learning is happening
+
+DISC =     
+    model.add(Dense(24*2, activation='relu', kernel_initializer='he_uniform', input_dim=n_inputs))
+    model.add(Dense(18, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(18, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(9, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(1, activation='sigmoid')) 
+    
+GEN =      
+    model.add(Dense(16, activation='tanh', kernel_initializer='he_uniform', input_dim=latent_dim))
+    model.add(Dense(16, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(24, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(24, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(n_outputs, activation='linear'))
+    
+there are very noisy signals generated, but a very rough day and night pattern could be discerned
+now fixed plots, trying 
+
+DISC=
+    model.add(Dense(24*2, activation='relu', kernel_initializer='he_uniform', input_dim=n_inputs))
+    model.add(Dense(18, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(9, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(1, activation='sigmoid'))
+GEN=
+    model.add(Dense(16, activation='tanh', kernel_initializer='he_uniform', input_dim=latent_dim))
+    model.add(Dense(16, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(24, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(n_outputs, activation='linear'))
+    
+    and
+DISC=
+    model.add(Dense(24*2, activation='relu', kernel_initializer='he_uniform', input_dim=n_inputs))
+    model.add(Dense(18, activation='relu', kernel_initializer='he_uniform'))
+    model.add(Dense(1, activation='sigmoid'))
+GEN=
+    model.add(Dense(16, activation='tanh', kernel_initializer='he_uniform', input_dim=latent_dim))
+    model.add(Dense(24, activation='tanh', kernel_initializer='he_uniform'))
+    model.add(Dense(n_outputs, activation='linear'))
+
+In conclusiong, the deeper and shallower models weren't great, the medium model returned some of the best results so far.
+    
+ 
+
+
                  
                  
                  July 2   July 2  July 2   July 2  July 2   July 2  July 2   July 2
