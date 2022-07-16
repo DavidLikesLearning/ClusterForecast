@@ -60,7 +60,7 @@ def showRandRows(M,N=None,leg=False):
         pl.legend(randRows)
     return randRows
 
-def dispRandRows(M, N,figsize=(6,3)):
+def dispRandRows(M, N,figsize=(6,3),title=''):
     '''
     plots N2 rows in an array N2/4 by 4 of individual plots, where N2 is the smallest multiple
     of 4 equal to or greater than N.
@@ -72,4 +72,19 @@ def dispRandRows(M, N,figsize=(6,3)):
     for i in range(N2):
         plt.subplot(N2//4,4,i+1)
         plt.plot(M[i])
+    plt.title(title)
     plt.tight_layout()
+
+
+def tstr():
+    '''
+    provides a string of current time in PST
+    for time sensitive file names with no colons or spaces
+    '''
+    out = ''
+    for i in time.ctime():
+        if i!=' ' and i!=':':
+            out+=i
+        else:
+            out+='_'
+    return out
