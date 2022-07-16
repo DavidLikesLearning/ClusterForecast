@@ -69,10 +69,10 @@ def dispRandRows(M, N,figsize=(6,3),title=''):
     N2 = (N//4+1)*4
     randRows  =np.random.choice(M.shape[0],size=N2,replace=False)
     plt.subplots(N2//4,4,figsize=figsize)
+    plt.suptitle(title)
     for i in range(N2):
         plt.subplot(N2//4,4,i+1)
         plt.plot(M[i])
-    plt.title(title)
     plt.tight_layout()
 
 
