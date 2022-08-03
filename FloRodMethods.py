@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.colors as colors
+import time
 COLORS = list(colors.CSS4_COLORS.keys())
 def plotClust2D(labels, M, axes = ['max','tmax'],COLORS =COLORS,colorsLst = None,legend = None):
     numColors = len(COLORS)
