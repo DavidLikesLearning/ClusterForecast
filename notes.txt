@@ -1,7 +1,10 @@
                 August 5    August 5    August 5    August 5    August 5    August 5
 doubled training set for discriminator as well as epochs, performance not better on original
 testing, now setting off large 6 gen, 8 disc, arch search with double disc (DD) GAN training
-scheeme
+scheeme. best architectures: 
+['DDConv12 16 24 32_c4 c4 c4 f d48 d18 d9.png',
+ 'DDConv12 16 24 32_c4 c4 f d48 d18 d9.png',
+ 'DDConv16 16 16_c4 c4 f d24 d24 d24 d12.png']
                 
                 August 3   August 3    August 3    August 3   August 3
 convolutional model resolved, much smoother outputs
