@@ -1,4 +1,13 @@
-                 July 15   July 15   July 15   July 15   July 15   July 15   July 15
+                August 5    August 5    August 5    August 5    August 5    August 5
+doubled training set for discriminator as well as epochs, performance not better on original
+testing, now setting off large 6 gen, 8 disc, arch search with double disc (DD) GAN training
+scheeme
+                
+                August 3   August 3    August 3    August 3   August 3
+convolutional model resolved, much smoother outputs
+   
+                               
+                July 15   July 15   July 15   July 15   July 15   July 15   July 15
                  
 lost all July 1st work. redoing successful GANs,
 -remove weekends, normalize
@@ -43,7 +52,7 @@ GEN=
     model.add(Dense(n_outputs, activation='linear'))
 
 In conclusiong, the deeper and shallower models weren't great, the medium model returned some of the best results so far.
-    
+    LAST GOOD MODEL SAVED UNDER 'testSaveAll'
  
 
 
