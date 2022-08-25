@@ -1,3 +1,25 @@
+               August 24    August 24    August 24    August 24    August 24    
+           
+k means algorithm has some randomness to it so I'll choose the best one out of 100 for all Ks from 4 to 200
+again, DBSCAN underperforms, will see variance in single k's dbi before deciding if DBSCAN is entriely out of the question
+tested dbi 50 times on the same clusters, there is NO randomness here. K means to run 80 times from 5 to 300. each run took 5 minutes.
+      
+      
+               
+               August 23    August 23    August 23    August 23    August 23
+                
+Now to look at the clustering, again we use the paper's clustering [see ClusterSuccess]:
+[there may be issues in the sleep load duration as it used the two-day arrays]
+
+Near-Peak load: 97.5 (no, 95) percentile of daily load, denoted as 
+Near-Base load: 2.5 (no, 10) percentile of daily load, denoted as 
+High-load duration: Duration for which load is closer to near-peak load ( than to the near-base ( i.e., the duration of 
+Rise time: Duration for load to go from base load to the start of the high-load period
+Fall time: Duration for load to go from the end of the high-load period to the base load
+
+                
+                
+                
                 August 5    August 5    August 5    August 5    August 5    August 5
 doubled training set for discriminator as well as epochs, performance not better on original
 testing, now setting off large 6 gen, 8 disc, arch search with double disc (DD) GAN training
