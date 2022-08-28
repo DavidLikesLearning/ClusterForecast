@@ -1,3 +1,10 @@
+               August 28    August 28    August 28    August 28    August 28    
+               
+the scipy.signal.resample function works fantastic for getting a weekdays signal of 480 into 120 for clustering
+clustering cetners have been found, need to optimize this clustering and design the metric for evaluating the actual generation of signals... want to email chad as tao sun was not helpful, that paper isn't clearly written enough to copy their methods, the code is also in r.
+               
+               
+               
                August 24    August 24    August 24    August 24    August 24    
            
 k means algorithm has some randomness to it so I'll choose the best one out of 100 for all Ks from 4 to 200
