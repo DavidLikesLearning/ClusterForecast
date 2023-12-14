@@ -11,9 +11,9 @@ Sample PDFs for functionality:
   - frequencyClusteringExample.pdf
   - lowDimClusteringExample.pdf
 
-The easiest way to leverage this is the notebook using the final functions: 
+The easiest way to leverage this is the notebook using the final functions in the notebook: 
   - Grouping&GeneratingFlorezRodriguez.ipynb
 
 Note:
-the aThesis... files are checkpoints in the path of finishing a project for school. These will note likely have the best functional code. Stick to Grouping&GeneratingFlorezRodriguez.ipynb notebook and demo PDFs.
+the aThesis... files are checkpoints in the path of finishing a project for school. These will not likely have the most functional, documented, and intuitive code. Stick to Grouping&GeneratingFlorezRodriguez.ipynb notebook and demo PDFs.
 
